@@ -2,9 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
-import LoginView from './Views/LoginView'
+import LoginView from './views/loginView'
+import Dashboard from './views/dashboard'
+import DishesView from './views/dishesView'
+import ComposeView from './views/composeView'
 
-
+//STEP 5 (build your client side api routes)
 const app = function() {
   const AppRouter = Backbone.Router.extend({
     routes: {
@@ -15,7 +18,7 @@ const app = function() {
       "*catchall": "handleRedirect"
     },
     handleHome: function(){
-      ReactDOM.render(<LoginView />, document.querySelector('.container'))
+      ReactDOM.render(<Dashboard />, document.querySelector('.container'))
     },
     handlePostDish: function(){
       ReactDOM.render(<ComposeView />, document.querySelector('.container'))
@@ -35,6 +38,7 @@ const app = function() {
 
   })
   new AppRouter()
+
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..

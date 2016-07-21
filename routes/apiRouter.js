@@ -43,6 +43,8 @@ let Dish = require('../db/schema.js').Dish //STEP THREE (import schema)
 
     // Routes for a Model(resource) should have this structure
 
+//STEP FOUR (build your server side apiroutes)
+
 //this route will create a brand new dish that we will put in the db
 apiRouter.post('/dishes', function(request, response) {
     let dish = new Dish(request.body) //create new instance of schema from a MONGOOSE model, request.body is all the information that we have taken from the client side and we send it on the body of the request to the server

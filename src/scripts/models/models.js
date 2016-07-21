@@ -9,6 +9,7 @@ const UserAuthModel = Backbone.Model.extend({
 })
 
 UserAuthModel.register = function(userObj) {
+
 	return $.ajax({
 		type: 'post',
 		url: '/auth/register',
