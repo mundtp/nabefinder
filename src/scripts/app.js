@@ -6,6 +6,7 @@ import LoginView from './views/loginView'
 import Dashboard from './views/dashboard'
 import DishesView from './views/dishesView'
 import ComposeView from './views/composeView'
+import {User, DishModel, MyDishCollection} from './models/models'
 
 //STEP 5 (build your client side api routes)
 const app = function() {
@@ -24,7 +25,11 @@ const app = function() {
       ReactDOM.render(<ComposeView />, document.querySelector('.container'))
     },
     handleMyDishes: function(){
-      ReactDOM.render(<DishesView />, document.querySelector('.container'))
+      var coll = new MyDishCollection()
+      coll.fetch().fail(function(err){
+        console.log(err)
+      })
+      ReactDOM.render(<DishesView coll={coll} />, document.querySelector('.container'))
     },
     handleLogin: function(){
       ReactDOM.render(<LoginView />, document.querySelector('.container'))
@@ -33,7 +38,12 @@ const app = function() {
       location.hash = "home"
     },
     initialize: function(){
-      Backbone.history.start()
+        Backbone.history.start()
+        this.on('route', function(handlerName){
+            if(!User.getCurrentUser()){
+              location.hash = "login"
+            }
+        })
     }
 
   })

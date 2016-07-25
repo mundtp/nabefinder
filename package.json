@@ -2,7 +2,7 @@
   "name": "tiy-full-stack",
   "version": "0.0.0",
   "description": "a lightweight build system for transpiling js & scss, browserifying and running a simple node server. auto-installs backbone and react",
-  "main": "index.html", 
+  "main": "index.html",
   "scripts": {
     "go": "npm run watch && npm run dev",
     "deploy": "git push origin master && git push heroku master",
@@ -63,6 +63,8 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-filepicker": "^0.7.1",
+    "toastr": "^2.1.2"
   }
 }

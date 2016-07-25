@@ -58,6 +58,17 @@ apiRouter.post('/dishes', function(request, response) {
     })
 })
 
+apiRouter.put('/dishes/:_id', function(request, response) {
+    Dish.findByIdAndUpdate(request.params._id, request.body,function(error,records){ //saves to db
+        if(error) {
+            response.send(error)
+        }
+        else {
+            response.json(records)
+        }
+    })
+})
+
 //this route will show us all the dishes posted by all users
 apiRouter.get('/dishes', function(request, response) {
     Dish.find(request.query, function(error, records){  //some methods live directly on the model, so you don't need to create a new instance.
@@ -82,6 +93,16 @@ apiRouter.get('/user/dishes', function(request, response) {
         }
     })
 })
+
+apiRouter.delete('/dishes/:_id', function(req, res){
+      Dish.remove({ _id: req.params._id}, (err) => {
+        if(err) return res.json(err)
+        res.json({
+          msg: `record ${req.params._id} successfully deleted`,
+          _id: req.params._id
+        })
+      })
+    })
 
 
 module.exports = apiRouter

@@ -1,4 +1,7 @@
-import {User} from './models/models'
+import {User, DishModel} from './models/models'
+import DISH_STORE from './store'
+
+
 
 const ACTIONS = {
 
@@ -11,7 +14,6 @@ const ACTIONS = {
                 console.log(error)
             }
         )
-
     },
 
     logUserIn: function(email, password) {
@@ -32,6 +34,35 @@ const ACTIONS = {
         User.logout().then(
             () => location.hash = 'login'
         )
+    },
+    saveDish: function(dishObj){
+        var dish = new DishModel(dishObj)
+        dish.save().then(
+            (responseData) => {
+              alert('dish is saved')
+              console.log(responseData)
+              location.hash='home'
+            },
+            (err) => {
+              alert('Failure')
+              console.log(err)
+            }
+        )
+    },
+    fetchDishes: function(tags){
+          DISH_STORE.data.collection.fetch({
+                data: {
+                    tags: tags
+                }
+          })
+    },
+    likeDish: function(dish,userObj){
+        // dish.get('likes').push(userObj._id)
+        dish.set({
+            likes: dish.get('likes').concat(userObj._id)
+        })
+        dish.save()
+        DISH_STORE.data.collection.fetch()
     }
 }
 
