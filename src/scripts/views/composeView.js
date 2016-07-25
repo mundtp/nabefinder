@@ -42,13 +42,16 @@ const DishPostingForm = React.createClass({
 					<input type="text" name="title" placeholder="Dish Title"/>
 					<textarea name="description" placeholder="Description"></textarea>
 					<input type="text" name="location" placeholder="Location"/>
-					<a>Rating: </a><select name="rating" placeholder="Select a rating">
+					<div>
+						<a>Rating: </a>
+						<select name="rating" placeholder="Select a rating">
 						<option value="5">5 (Highest)</option>
 						<option value="4">4</option>
 						<option value="3">3</option>
 						<option value="2">2</option>
 						<option value="1">1 (Lowest)</option>
-					</select>
+						</select>
+					</div>
 					<input type="text" name="tags" placeholder="Enter tags separated by commas"/>
 					<ReactFilepicker apikey='AvwF4EpzcTGC43TQkmd4xz' onSuccess={this._handleImage}/>
 
