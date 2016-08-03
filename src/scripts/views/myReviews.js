@@ -22,7 +22,7 @@ const MyReviews = React.createClass({
 	render: function() {
 	 	return (
 	 		<div className='dashboard' >
-	 			<Header />
+	 			<HeaderBar />
 	 			<h3 id='myReviewsHeader'>My Reviews</h3>
 	 			<NabeContainer nabeColl={this.props.coll}/>
 	 		</div>

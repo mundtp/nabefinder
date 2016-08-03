@@ -85,7 +85,7 @@ const ComposeView = React.createClass({
 	 render: function() {
 	 	return (
 	 		<div className="composeView" >
-	 			<Header />
+	 			<HeaderBar />
 	 			<h3 id="createReview">Post a Review</h3>
 	 			<div>
 		 			<input className='searchBar' onKeyDown={this._handleTagSearch} type='text' placeholder='First, search an address or neighborhood...' />

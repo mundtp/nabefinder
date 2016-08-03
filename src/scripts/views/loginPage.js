@@ -6,7 +6,7 @@ const LoginPage = React.createClass({
     render: function() {
         return (
             <div className="loginView">
-                <Header />
+                <HeaderBar />
                 <RegisterBox />
                 <LoginBox />
             </div>

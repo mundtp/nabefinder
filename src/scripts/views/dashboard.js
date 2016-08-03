@@ -177,7 +177,7 @@ const Dashboard = React.createClass({
 
 	 	return (
 	 		<div className='dashboard' >
-	 			<Header />
+	 			<HeaderBar />
 	 			<h3 id='home'>Home</h3>
 	 			<div >
 	 				<input className='searchBar' onKeyDown={this._handleTagSearch} type='text' placeholder='Search an address or neighborhood...'/>
