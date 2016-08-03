@@ -1,0 +1,101 @@
+2016-08-03T16:15:08.943145+00:00 app[web.1]:     at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2016-08-03T16:15:08.943135+00:00 app[web.1]:     at EventEmitter.render (/app/node_modules/express/lib/application.js:579:17)
+2016-08-03T16:15:08.943146+00:00 app[web.1]:     at /app/node_modules/express/lib/router/index.js:277:22
+2016-08-03T16:15:02.707061+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=2ba3f38a-bb9e-428a-b0d9-d4e663f709d6 fwd="73.166.222.21" dyno=web.1 connect=1ms service=3ms status=304 bytes=237
+2016-08-03T16:15:02.554595+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=cba783c7-e436-4788-9610-1e0b36d573ad fwd="73.166.222.21" dyno=web.1 connect=4ms service=5ms status=304 bytes=241
+2016-08-03T16:15:02.702918+00:00 heroku[router]: at=info method=GET path="/js/app.js" host=nabefinder.herokuapp.com request_id=76cebfe0-7ba9-4d08-82c5-af4a163bb217 fwd="73.166.222.21" dyno=web.1 connect=0ms service=2ms status=304 bytes=240
+2016-08-03T16:15:09.420394+00:00 app[web.1]: no user
+2016-08-03T16:15:03.208384+00:00 heroku[router]: at=info method=GET path="/api/neighborhoods" host=nabefinder.herokuapp.com request_id=b04559ad-6b38-4182-9acb-766407611608 fwd="73.166.222.21" dyno=web.1 connect=1ms service=7ms status=304 bytes=240
+2016-08-03T16:15:10.102411+00:00 app[web.1]: no user
+2016-08-03T16:15:08.436650+00:00 heroku[router]: at=info method=GET path="/api/neighborhoods" host=nabefinder.herokuapp.com request_id=735ddc5b-6360-4522-a412-85c0cc0d7459 fwd="73.166.222.21" dyno=web.1 connect=0ms service=10ms status=304 bytes=240
+2016-08-03T16:15:08.942111+00:00 heroku[router]: at=info method=GET path="/api/user/neighborhoods" host=nabefinder.herokuapp.com request_id=0ef871b1-bd6b-42bf-86be-b29c18c16b63 fwd="73.166.222.21" dyno=web.1 connect=3ms service=15ms status=500 bytes=328
+2016-08-03T16:15:09.423805+00:00 heroku[router]: at=info method=GET path="/api/neighborhoods" host=nabefinder.herokuapp.com request_id=2b0b68c4-1cbd-47cb-aabd-b6381ee7c049 fwd="73.166.222.21" dyno=web.1 connect=0ms service=9ms status=304 bytes=240
+2016-08-03T16:15:10.116806+00:00 heroku[router]: at=info method=GET path="/auth/logout" host=nabefinder.herokuapp.com request_id=0781aec7-af1c-453c-b5bc-713222389d11 fwd="73.166.222.21" dyno=web.1 connect=0ms service=28ms status=200 bytes=330
+2016-08-03T16:15:43.546652+00:00 app[web.1]: no user
+2016-08-03T16:15:43.981514+00:00 heroku[router]: at=info method=GET path="/js/app.js" host=nabefinder.herokuapp.com request_id=b19b835a-b606-4429-b92e-fa086ccc146d fwd="73.166.222.21" dyno=web.1 connect=0ms service=1ms status=304 bytes=240
+2016-08-03T16:15:43.546547+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=e71a4d60-1afc-4953-8fc3-a9cea6fe1780 fwd="73.166.222.21" dyno=web.1 connect=0ms service=3ms status=304 bytes=241
+2016-08-03T16:15:43.979097+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=8483ea78-0db5-447c-8d3e-0eb2f341d7e3 fwd="73.166.222.21" dyno=web.1 connect=2ms service=6ms status=304 bytes=237
+2016-08-03T16:20:42.538951+00:00 app[web.1]: no user
+2016-08-03T16:20:42.574398+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=917de8ad-0b08-4a2a-b6dc-5d6aff45f616 fwd="73.166.222.21" dyno=web.1 connect=2ms service=5ms status=304 bytes=241
+2016-08-03T16:20:42.859328+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=3eeaa21c-60a3-449a-ab6e-04c4d2da87e7 fwd="73.166.222.21" dyno=web.1 connect=0ms service=5ms status=304 bytes=237
+2016-08-03T16:26:57.902014+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-08-03T16:26:57.902008+00:00 heroku[slug-compiler]: Slug compilation started
+2016-08-03T16:26:57.651042+00:00 heroku[api]: Deploy 48cf732 by pamundt@gmail.com
+2016-08-03T16:26:57.651042+00:00 heroku[api]: Release v10 created by pamundt@gmail.com
+2016-08-03T16:26:57.847500+00:00 heroku[web.1]: Restarting
+2016-08-03T16:26:57.848176+00:00 heroku[web.1]: State changed from up to starting
+2016-08-03T16:27:00.439351+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-08-03T16:27:00.494688+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-08-03T16:27:01.587333+00:00 heroku[web.1]: Process exited with status 143
+2016-08-03T16:27:03.965638+00:00 app[web.1]: > node --use_strict server.js
+2016-08-03T16:27:03.965637+00:00 app[web.1]: > tiy-full-stack@0.0.0 start /app
+2016-08-03T16:27:03.965638+00:00 app[web.1]: 
+2016-08-03T16:27:03.965620+00:00 app[web.1]: 
+2016-08-03T16:27:05.358095+00:00 app[web.1]: running db-setup
+2016-08-03T16:27:05.377937+00:00 app[web.1]: finished setup
+2016-08-03T16:27:05.396288+00:00 app[web.1]: Wed, 03 Aug 2016 16:27:05 GMT body-parser deprecated undefined extended: provide extended option at server.js:47:21
+2016-08-03T16:27:05.399635+00:00 app[web.1]: designed for a production environment, as it will leak
+2016-08-03T16:27:05.399636+00:00 app[web.1]: memory, and will not scale past a single process.
+2016-08-03T16:27:05.399632+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2016-08-03T16:27:05.435323+00:00 app[web.1]: 
+2016-08-03T16:27:05.435325+00:00 app[web.1]: 
+2016-08-03T16:27:05.435326+00:00 app[web.1]: ===== listening for requests on port 25900 =====
+2016-08-03T16:27:05.435327+00:00 app[web.1]: 
+2016-08-03T16:27:05.435327+00:00 app[web.1]: 
+2016-08-03T16:27:05.399237+00:00 app[web.1]: Wed, 03 Aug 2016 16:27:05 GMT express-session deprecated undefined resave option; provide resave option at server.js:49:10
+2016-08-03T16:27:05.399469+00:00 app[web.1]: Wed, 03 Aug 2016 16:27:05 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at server.js:49:10
+2016-08-03T16:27:05.780796+00:00 app[web.1]: 
+2016-08-03T16:27:05.780815+00:00 app[web.1]: 
+2016-08-03T16:27:05.780816+00:00 app[web.1]: ===== Connected to: mongodb://localhost/undefined=====
+2016-08-03T16:27:05.780817+00:00 app[web.1]: 
+2016-08-03T16:27:05.780817+00:00 app[web.1]: 
+2016-08-03T16:27:05.996557+00:00 heroku[web.1]: State changed from starting to up
+2016-08-03T16:27:07.344042+00:00 app[web.1]: no user
+2016-08-03T16:27:07.367019+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=6629e55a-75bf-405a-8d9c-c16533a711f0 fwd="73.166.222.21" dyno=web.1 connect=1ms service=41ms status=304 bytes=367
+2016-08-03T16:31:32.156555+00:00 app[web.1]: no user
+2016-08-03T16:31:32.162093+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=9fd019c9-df6f-476e-bd8b-5b8f9ced4669 fwd="73.166.222.21" dyno=web.1 connect=0ms service=9ms status=304 bytes=241
+2016-08-03T16:31:32.387482+00:00 heroku[router]: at=info method=GET path="/js/app.js" host=nabefinder.herokuapp.com request_id=282681d4-d2a8-4a70-9ad6-5272d29506fc fwd="73.166.222.21" dyno=web.1 connect=1ms service=3ms status=304 bytes=240
+2016-08-03T16:31:32.385316+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=5bc013e6-3cff-45fc-9ace-e649df9b652a fwd="73.166.222.21" dyno=web.1 connect=0ms service=2ms status=304 bytes=237
+2016-08-03T16:34:16.275123+00:00 app[web.1]: no user
+2016-08-03T16:34:16.623546+00:00 heroku[router]: at=info method=GET path="/js/app.js" host=nabefinder.herokuapp.com request_id=8c38905c-7890-4c63-8313-319b1f5fccb8 fwd="73.166.222.21" dyno=web.1 connect=2ms service=3ms status=304 bytes=240
+2016-08-03T16:34:16.711062+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=270f801d-d982-486d-b4ef-5acc949296ac fwd="73.166.222.21" dyno=web.1 connect=19ms service=25ms status=304 bytes=237
+2016-08-03T16:34:31.155797+00:00 app[web.1]: no user
+2016-08-03T16:34:31.315191+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=4900362e-765e-4cc7-99d2-c26b98a653d8 fwd="73.166.222.21" dyno=web.1 connect=59ms service=124ms status=304 bytes=241
+2016-08-03T16:34:31.947658+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=942f64db-96e7-4fdc-a2b4-ea8c8e2df40c fwd="73.166.222.21" dyno=web.1 connect=25ms service=31ms status=304 bytes=237
+2016-08-03T16:34:31.849528+00:00 heroku[router]: at=info method=GET path="/js/app.js" host=nabefinder.herokuapp.com request_id=4d8a8720-422d-4923-b878-2083009a742d fwd="73.166.222.21" dyno=web.1 connect=1ms service=4ms status=304 bytes=240
+2016-08-03T16:38:12.869109+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-08-03T16:38:12.869100+00:00 heroku[slug-compiler]: Slug compilation started
+2016-08-03T16:38:12.619123+00:00 heroku[api]: Deploy f0b170c by pamundt@gmail.com
+2016-08-03T16:38:12.619220+00:00 heroku[api]: Release v11 created by pamundt@gmail.com
+2016-08-03T16:38:13.072682+00:00 heroku[web.1]: Restarting
+2016-08-03T16:38:13.073484+00:00 heroku[web.1]: State changed from up to starting
+2016-08-03T16:38:15.246156+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-08-03T16:38:17.102356+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-08-03T16:38:17.585037+00:00 app[web.1]: > node --use_strict server.js
+2016-08-03T16:38:17.585037+00:00 app[web.1]: 
+2016-08-03T16:38:17.585015+00:00 app[web.1]: 
+2016-08-03T16:38:17.585035+00:00 app[web.1]: > tiy-full-stack@0.0.0 start /app
+2016-08-03T16:38:18.191620+00:00 app[web.1]: running db-setup
+2016-08-03T16:38:18.204934+00:00 app[web.1]: finished setup
+2016-08-03T16:38:18.217062+00:00 app[web.1]: Wed, 03 Aug 2016 16:38:18 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at server.js:49:10
+2016-08-03T16:38:18.215424+00:00 app[web.1]: Wed, 03 Aug 2016 16:38:18 GMT body-parser deprecated undefined extended: provide extended option at server.js:47:21
+2016-08-03T16:38:18.216840+00:00 app[web.1]: Wed, 03 Aug 2016 16:38:18 GMT express-session deprecated undefined resave option; provide resave option at server.js:49:10
+2016-08-03T16:38:18.217137+00:00 app[web.1]: memory, and will not scale past a single process.
+2016-08-03T16:38:18.227066+00:00 app[web.1]: 
+2016-08-03T16:38:18.227065+00:00 app[web.1]: 
+2016-08-03T16:38:18.227067+00:00 app[web.1]: ===== listening for requests on port 30329 =====
+2016-08-03T16:38:18.227068+00:00 app[web.1]: 
+2016-08-03T16:38:18.227068+00:00 app[web.1]: 
+2016-08-03T16:38:18.217136+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2016-08-03T16:38:18.217137+00:00 app[web.1]: designed for a production environment, as it will leak
+2016-08-03T16:38:18.310831+00:00 heroku[web.1]: Process exited with status 143
+2016-08-03T16:38:18.487549+00:00 app[web.1]: 
+2016-08-03T16:38:18.487538+00:00 app[web.1]: 
+2016-08-03T16:38:18.487550+00:00 app[web.1]: 
+2016-08-03T16:38:18.487550+00:00 app[web.1]: ===== Connected to: mongodb://localhost/undefined=====
+2016-08-03T16:38:18.487551+00:00 app[web.1]: 
+2016-08-03T16:38:19.035467+00:00 heroku[web.1]: State changed from starting to up
+2016-08-03T16:38:57.242245+00:00 app[web.1]: no user
+2016-08-03T16:38:57.266068+00:00 heroku[router]: at=info method=GET path="/" host=nabefinder.herokuapp.com request_id=2981f780-8676-4bf9-9f52-119961b1d53a fwd="73.166.222.21" dyno=web.1 connect=6ms service=44ms status=304 bytes=369
+2016-08-03T16:38:57.498882+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=nabefinder.herokuapp.com request_id=84aef736-7804-47c8-bbcc-2bc4b4b8aa1c fwd="73.166.222.21" dyno=web.1 connect=1ms service=13ms status=200 bytes=2393
+2016-08-03T16:38:57.559609+00:00 heroku[router]: at=info method=GET path="/js/app.js" host=nabefinder.herokuapp.com request_id=cab6bf25-ad30-4f56-a3f1-726d51f00ea1 fwd="73.166.222.21" dyno=web.1 connect=0ms service=72ms status=200 bytes=3126677
