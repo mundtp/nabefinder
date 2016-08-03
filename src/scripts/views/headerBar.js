@@ -5,7 +5,7 @@ const HeaderBar = React.createClass({
     render: function() {
         return (
             <div id="headerContainer">
-                <h1>NabeFinder</h1>
+                <h2>NabeFinder</h2>
                 <NavBar />
             </div>
             )
