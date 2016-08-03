@@ -4,7 +4,7 @@ import ACTIONS from '../actions'
 const HeaderBar = React.createClass({
     render: function() {
         return (
-            <div id="headerContainer">
+            <div id="header">
                 <h2>NabeFinder</h2>
                 <NavBar />
             </div>
