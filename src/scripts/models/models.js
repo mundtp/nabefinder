@@ -2,20 +2,20 @@ import Backbone from 'backbone'
 import $ from 'jquery'
 import {app_name} from '../app'
 
-const DishModel = Backbone.Model.extend({
-	urlRoot: '/api/dishes',
+const NabeModel = Backbone.Model.extend({
+	urlRoot: '/api/neighborhoods',
 	idAttribute: '_id'
 })
 
-const DishCollection = Backbone.Collection.extend ({
-	model: DishModel,
-	url: '/api/dishes'
+const NabeCollection = Backbone.Collection.extend ({
+	model: NabeModel,
+	url: '/api/neighborhoods'
 
 })
 
-const MyDishCollection = Backbone.Collection.extend ({
-	model: DishModel,
-	url: '/api/user/dishes'
+const MyNabeCollection = Backbone.Collection.extend ({
+	model: NabeModel,
+	url: '/api/user/neighborhoods'
 
 })
 
@@ -69,4 +69,4 @@ const User = UserAuthModel.extend({
 	}
 })
 
-export { User , DishModel, DishCollection, MyDishCollection }
+export { User , NabeModel, NabeCollection, MyNabeCollection }

@@ -1,5 +1,5 @@
-import {User, DishModel} from './models/models'
-import DISH_STORE from './store'
+import {User, NabeModel} from './models/models'
+import NABE_STORE from './store'
 
 
 
@@ -35,11 +35,11 @@ const ACTIONS = {
             () => location.hash = 'login'
         )
     },
-    saveDish: function(dishObj){
-        var dish = new DishModel(dishObj)
-        dish.save().then(
+    saveNabe: function(nabeObj){
+        var nabe = new NabeModel(nabeObj)
+        nabe.save().then(
             (responseData) => {
-              alert('dish is saved')
+              alert('neighborhood is saved')
               console.log(responseData)
               location.hash='home'
             },
@@ -49,20 +49,24 @@ const ACTIONS = {
             }
         )
     },
-    fetchDishes: function(tags){
-          DISH_STORE.data.collection.fetch({
+    fetchReviews: function(tags){
+          NABE_STORE.data.collection.fetch({
                 data: {
                     tags: tags
                 }
           })
     },
-    likeDish: function(dish,userObj){
-        // dish.get('likes').push(userObj._id)
-        dish.set({
-            likes: dish.get('likes').concat(userObj._id)
+    likeNabe: function(nabe,userObj){
+        if(nabe.get('likes').includes(userObj._id)){
+            console.log('User has already liked this post')
+            return
+        }
+        
+        nabe.set({
+            likes: nabe.get('likes').concat(userObj._id)
         })
-        dish.save()
-        DISH_STORE.data.collection.fetch()
+        nabe.save()
+        NABE_STORE.data.collection.fetch()
     }
 }
 

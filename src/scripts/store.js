@@ -1,11 +1,11 @@
 import Backbone from 'backbone'
 import _ from 'underscore'
-import {DishCollection} from './models/models'
+import {NabeCollection} from './models/models'
 
-const DISH_STORE = _.extend(Backbone.Events, {
+const NABE_STORE = _.extend(Backbone.Events, {
 
 	data: {
-		collection: new DishCollection(),
+		collection: new NabeCollection(),
 	},
 
 	_emitChange: function(){
@@ -22,6 +22,6 @@ const DISH_STORE = _.extend(Backbone.Events, {
 	}
 })
 
-DISH_STORE._initialize()
+NABE_STORE._initialize()
 
-export default DISH_STORE
+export default NABE_STORE

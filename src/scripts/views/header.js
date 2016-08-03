@@ -7,7 +7,7 @@ const Header = React.createClass({
     render: function() {
         return (
             <div id="headerContainer">
-                <h1 >Food Mood</h1>
+                <h1>NabeFinder</h1>
                 <NavBar />
             </div>
             )
@@ -19,9 +19,9 @@ const NavBar = React.createClass({
         return (
             <div id="navBar"> {/*made a few edits here so that is makes sense for this app*/}
                 <a href="#login">Log In</a>
-                <a href="#home">All Dishes</a>
-                <a href="#dish/myDishes">My Dishes</a>
-                <a href="#dish/postDishes">Post Dish</a>
+                <a href="#home">Home</a>
+                <a href="#neighborhood/myReviews">My Reviews</a>
+                <a href="#neighborhood/createReview">Create Review</a>
                 <a href="#" onClick={ACTIONS.logUserOut}>Log Out</a>
             </div>
             )

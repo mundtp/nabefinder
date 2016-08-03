@@ -4,32 +4,32 @@ import Backbone from 'backbone'
 import init from './init'
 import LoginView from './views/loginView'
 import Dashboard from './views/dashboard'
-import DishesView from './views/dishesView'
+import MyPostsView from './views/myPostsView'
 import ComposeView from './views/composeView'
-import {User, DishModel, MyDishCollection} from './models/models'
+import {User, NabeModel, MyNabeCollection} from './models/models'
 
 //STEP 5 (build your client side api routes)
 const app = function() {
   const AppRouter = Backbone.Router.extend({
     routes: {
       "home": "handleHome",
-      "dish/postDishes": "handlePostDish",
-      "dish/myDishes": "handleMyDishes",
+      "neighborhood/createReview": "handleCreateReview",
+      "neighborhood/myReviews": "handleMyReviews",
       "login": "handleLogin",
       "*catchall": "handleRedirect"
     },
     handleHome: function(){
       ReactDOM.render(<Dashboard />, document.querySelector('.container'))
     },
-    handlePostDish: function(){
+    handleCreateReview: function(){
       ReactDOM.render(<ComposeView />, document.querySelector('.container'))
     },
-    handleMyDishes: function(){
-      var coll = new MyDishCollection()
+    handleMyReviews: function(){
+      var coll = new MyNabeCollection()
       coll.fetch().fail(function(err){
         console.log(err)
       })
-      ReactDOM.render(<DishesView coll={coll} />, document.querySelector('.container'))
+      ReactDOM.render(<MyPostsView coll={coll} />, document.querySelector('.container'))
     },
     handleLogin: function(){
       ReactDOM.render(<LoginView />, document.querySelector('.container'))
