@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
-import LoginView from './views/loginView'
+import LoginPage from './views/loginPage'
 import Dashboard from './views/dashboard'
 import MyPostsView from './views/myPostsView'
 import ComposeView from './views/composeView'
@@ -32,7 +32,7 @@ const app = function() {
       ReactDOM.render(<MyPostsView coll={coll} />, document.querySelector('.container'))
     },
     handleLogin: function(){
-      ReactDOM.render(<LoginView />, document.querySelector('.container'))
+      ReactDOM.render(<LoginPage />, document.querySelector('.container'))
     },
     handleRedirect: function(){
       location.hash = "home"

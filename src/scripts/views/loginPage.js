@@ -2,9 +2,9 @@
 
 import React from 'react'
 import ACTIONS from '../actions'
-import Header from './header'
+import HeaderBar from './headerBar'
 
-const LoginView = React.createClass({
+const LoginPage = React.createClass({
     render: function() {
         return (
             <div className="loginView">
@@ -61,4 +61,4 @@ const LoginBox = React.createClass({
             )
     }
 })
-export default LoginView
+export default LoginPage

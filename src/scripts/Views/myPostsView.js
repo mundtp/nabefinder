@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './header'
+import HeaderBar from './headerBar'
 import ACTIONS from '../actions'
 import {User} from '../models/models'
 

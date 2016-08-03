@@ -3,7 +3,7 @@
 import React from 'react'
 import ACTIONS from '../actions'
 
-const Header = React.createClass({
+const HeaderBar = React.createClass({
     render: function() {
         return (
             <div id="headerContainer">
@@ -28,4 +28,4 @@ const NavBar = React.createClass({
     }
 })
 
-export default Header
+export default HeaderBar
