@@ -1,5 +1,3 @@
-//COPIED FROM MONGO MESSAGES
-
 import React from 'react'
 import ACTIONS from '../actions'
 import HeaderBar from './headerBar'

@@ -4,7 +4,7 @@ import ACTIONS from '../actions'
 import {User} from '../models/models'
 
 
-const MyPostsView = React.createClass({
+const MyReviews = React.createClass({
 
 	getInitialState: function() {
 		return {
@@ -67,6 +67,6 @@ const Nabe = React.createClass({
 	}
 })
 
-export default MyPostsView
+export default MyReviews
 
 

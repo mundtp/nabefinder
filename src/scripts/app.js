@@ -4,7 +4,7 @@ import Backbone from 'backbone'
 import init from './init'
 import LoginPage from './views/loginPage'
 import Dashboard from './views/dashboard'
-import MyPostsView from './views/myPostsView'
+import MyReviews from './views/myReviews'
 import ComposeView from './views/composeView'
 import {User, NabeModel, MyNabeCollection} from './models/models'
 
@@ -29,7 +29,7 @@ const app = function() {
       coll.fetch().fail(function(err){
         console.log(err)
       })
-      ReactDOM.render(<MyPostsView coll={coll} />, document.querySelector('.container'))
+      ReactDOM.render(<MyReviews coll={coll} />, document.querySelector('.container'))
     },
     handleLogin: function(){
       ReactDOM.render(<LoginPage />, document.querySelector('.container'))

@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import ACTIONS from '../actions'
 
