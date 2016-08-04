@@ -1,6 +1,7 @@
 import Backbone from 'backbone'
 import $ from 'jquery'
 import {app_name} from '../app'
+import toastr from 'toastr'
 
 const NabeModel = Backbone.Model.extend({
 	urlRoot: '/api/neighborhoods',
@@ -45,7 +46,7 @@ UserAuthModel.login = function(email,password) {
 	}).then((userData) => {
 		localStorage[app_name + '_user'] = JSON.stringify(userData)
 		return userData
-	},(err)=> {console.log(err.responseText)})
+	},(err)=> {console.log(err.responseText),toastr.error(err.responseText)})
 }
 
 UserAuthModel.logout = function() {

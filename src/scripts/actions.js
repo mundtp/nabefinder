@@ -1,5 +1,6 @@
 import {User, NabeModel} from './models/models'
 import NABE_STORE from './store'
+import toastr from 'toastr'
 
 
 
@@ -19,7 +20,7 @@ const ACTIONS = {
     logUserIn: function(email, password) {
         User.login(email, password).then(
             (responseData) => {
-                alert(`user ${email} logged in!`)
+                toastr.success(`User ${email} logged in`)
                 console.log(responseData)
                 location.hash = 'home' //want the page to re-route to the home page after successfull login
             },
@@ -39,7 +40,7 @@ const ACTIONS = {
         var nabe = new NabeModel(nabeObj)
         nabe.save().then(
             (responseData) => {
-              alert('neighborhood is saved')
+                toastr.success('Review has been saved')
               console.log(responseData)
               location.hash='home'
             },
@@ -58,7 +59,7 @@ const ACTIONS = {
     },
     likeNabe: function(nabe,userObj){
         if(nabe.get('likes').includes(userObj._id)){
-            console.log('User has already liked this post')
+            toastr.error('User has already liked this post')
             return
         }
         

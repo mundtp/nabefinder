@@ -7,6 +7,22 @@
 h1,h2,h3,h4,h5,h6 {
 	text-align: center;
 }
+.login {
+	h3 {
+		margin: 0;
+	}
+	form {
+		padding-bottom: 0;
+	}
+	input {
+    	width: 80%;
+    	margin: 1% auto; 
+    	border: 2px solid black;
+    	padding: 1.5%;
+	    display: block;
+	    font-size: 25px;
+    }
+}
 
 #myReviewsHeader {
 	padding: 2%;

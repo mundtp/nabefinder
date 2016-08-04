@@ -7,6 +7,7 @@ import UserReviews from './views/userReviews'
 import MyReviews from './views/myReviews'
 import ComposeView from './views/composeView'
 import {User, NabeModel, MyNabeCollection} from './models/models'
+import toastr from 'toastr'
 
 //STEP 5 (build your client side api routes)
 const app = function() {
@@ -19,7 +20,7 @@ const app = function() {
       "*catchall": "handleRedirect"
     },
     handleHome: function(){
-      ReactDOM.render(<Dashboard />, document.querySelector('.container'))
+      ReactDOM.render(<UserReviews />, document.querySelector('.container'))
     },
     handleCreateReview: function(){
       ReactDOM.render(<ComposeView />, document.querySelector('.container'))

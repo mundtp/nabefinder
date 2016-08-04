@@ -2,10 +2,11 @@ import React from 'react'
 import ACTIONS from '../actions'
 import HeaderBar from './headerBar'
 
+
 const LoginPage = React.createClass({
     render: function() {
         return (
-            <div className="loginView">
+            <div className="login">
                 <HeaderBar />
                 <RegisterBox />
                 <LoginBox />
@@ -27,12 +28,12 @@ const RegisterBox = React.createClass({
 
     render: function() {
         return (
-            <div className="loginBox register">
+            <div className="login">
                 <form onSubmit={this._handleRegister} >
                     <h3>Register</h3>
-                    <input name = 'userName' placeholder = 'please enter your name' /> {/* ADDED ONE INPUT*/}
-                    <input type="email" name="email" placeholder="enter your email" />
-                    <input type="password" name="password" placeholder="enter a password" />
+                    <input name = 'userName' placeholder = 'Name' />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="password" name="password" placeholder="Password" />
                     <button type="submit">Register</button>
                 </form>
             </div>
@@ -51,8 +52,8 @@ const LoginBox = React.createClass({
             <div className="loginBox login">
                 <form onSubmit={this._handleLogin} >
                     <h3>Log In</h3>
-                    <input type="email" name="email" placeholder="enter your email" />
-                    <input type="password" name="password" placeholder="enter a password" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="password" name="password" placeholder="Password" />
                     <button type="submit">Log In</button>
                 </form>
             </div>
