@@ -48,19 +48,35 @@ const Nabe = React.createClass({
 			url: `/api/neighborhoods/${this.props.nabeModel.id}`		
 		})
 	},
+	_handlesRating: function(num){
+		if (num === 5){
+			return <a><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></a>
+		}
+		if (num === 4){
+			return <a><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></a>
+		}
+		if (num === 3){
+			return <a><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></a>
+		}
+		if (num === 2){
+			return <a><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></a>
+		}
+		if (num === 1){
+			return <a><i className="fa fa-star" aria-hidden="true"></i></a>
+		}
+	},
 	render: function() {
 		return (
 			<div className="nabe">
+				<h3>{this.props.nabeModel.get('title')}</h3>
 				<img src={this.props.nabeModel.get('imageUrl')} />
-				<p>Neighborhood: {this.props.nabeModel.get('title')}</p>
-				<p>Zip Code: {this.props.nabeModel.get('zipcode')}</p>
+				<p>Overall Rating: {this.props.nabeModel.get('overallRating')} {this._handlesRating(this.props.nabeModel.get('overallRating'))}</p>
+				<p>Amentities Rating: {this.props.nabeModel.get('amentitiesRating')} {this._handlesRating(this.props.nabeModel.get('amentitiesRating'))}</p>
+				<p>Schools Rating: {this.props.nabeModel.get('schoolsRating')} {this._handlesRating(this.props.nabeModel.get('schoolsRating'))}</p>
 				<p>Overall Comments: {this.props.nabeModel.get('overallComments')}</p>
-				<p>Amentities Rating: {this.props.nabeModel.get('amentitiesRating')}</p>
 				<p>Amentities Comments: {this.props.nabeModel.get('amentitiesComments')}</p>
-				<p>Schools Rating: {this.props.nabeModel.get('schoolsRating')}</p>
-				<p>Schools Comments: {this.props.nabeModel.get('schoolsComments')}</p>
-				<p>Neighborhood Tag: {this.props.nabeModel.get('tags')}</p>
-				<p>Likes: {this.props.nabeModel.get('likes').length}</p>
+				<p>Schools Comments: {this.props.nabeModel .get('schoolsComments')}</p>
+				<p>{this.props.nabeModel.get('likes').length} Likes</p>
 				<button onClick={this._removeNabe}>Delete Post</button>
 			</div>
 			)

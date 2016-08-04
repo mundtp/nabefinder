@@ -105,6 +105,7 @@ const NabePostingForm = React.createClass({
 			title: neighborhood,
 			zipcode: zipcode,
 			overallComments: e.currentTarget.overallComments.value,
+			overallRating: e.currentTarget.overallRating.value,
 			amentitiesRating: e.currentTarget.amentitiesRating.value,
 			amentitiesComments: e.currentTarget.amentitiesComments.value,
 			schoolsRating: e.currentTarget.schoolsRating.value,
@@ -113,7 +114,6 @@ const NabePostingForm = React.createClass({
 			authorId: User.getCurrentUser()._id,
 			authorEmail: User.getCurrentUser().email,
 			imageUrl: this.url ? this.url: '/images/default-pic.jpg',
-			
 		})
 	},
 
@@ -127,29 +127,39 @@ const NabePostingForm = React.createClass({
 				<form onSubmit={this._handleCompose}>
 					<div><a>{neighborhood}</a></div>
 					<div><a>Zip Code: {zipcode}</a></div>
-					<textarea name="overallComments" placeholder="Overall comments..."></textarea>
 					<div>
-						<a>Schools Rating: </a>
-						<select name="schoolsRating" placeholder="Select a rating">
-						<option value="5">5 (Highest)</option>
-						<option value="4">4</option>
-						<option value="3">3</option>
-						<option value="2">2</option>
-						<option value="1">1 (Lowest)</option>
+						<a>Overall Rating: </a>
+						<select name="overallRating" placeholder="Select a rating">
+						<option value="5">5 Stars</option>
+						<option value="4">4 Stars</option>
+						<option value="3">3 Stars</option>
+						<option value="2">2 Stars</option>
+						<option value="1">1 Star</option>
 						</select>
 					</div>
-					<textarea name="schoolsComments" placeholder="Comments about schools..."></textarea>
 					<div>
 						<a>Amentities Rating: </a>
 						<select name="amentitiesRating" placeholder="Select a rating">
-						<option value="5">5 (Highest)</option>
-						<option value="4">4</option>
-						<option value="3">3</option>
-						<option value="2">2</option>
-						<option value="1">1 (Lowest)</option>
+						<option value="5">5 Stars</option>
+						<option value="4">4 Stars</option>
+						<option value="3">3 Stars</option>
+						<option value="2">2 Stars</option>
+						<option value="1">1 Star</option>
 						</select>
 					</div>
+					<div>
+						<a>Schools Rating: </a>
+						<select name="schoolsRating" placeholder="Select a rating">
+						<option value="5">5 Stars</option>
+						<option value="4">4 Stars</option>
+						<option value="3">3 Stars</option>
+						<option value="2">2 Stars</option>
+						<option value="1">1 Star</option>
+						</select>
+					</div>
+					<textarea name="overallComments" placeholder="Overall comments..."></textarea>
 					<textarea name="amentitiesComments" placeholder="Comments about amentities..."></textarea>
+					<textarea name="schoolsComments" placeholder="Comments about schools..."></textarea>
 					<div>Upload an image: <ReactFilepicker apikey='AvwF4EpzcTGC43TQkmd4xz' onSuccess={this._handleImage}/></div>
 					<button type='submit'>SUBMIT</button>
 					

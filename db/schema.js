@@ -22,6 +22,7 @@ const usersSchema = new Schema({
 const nabeSchema = new Schema ({ // establish the properties that we will use for the data
     title: {type: String, required: true},
     zipcode: {type: String, required: true},
+    overallRating: {type: Number, required: true},
     overallComments: {type: String},
     amentitiesRating: {type: Number, required: true},
     amentitiesComments: {type: String},
