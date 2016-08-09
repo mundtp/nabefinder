@@ -153,11 +153,11 @@ const HomeValueCalc = React.createClass({
 	},
 	_displayHomeValuation: function(){
 		if((zEstimate.length > 1) && (zIndex.length > 1)){
-			return <h4>The approximate value of the home is ${zEstimate}, and homes in the area are approximately ${zIndex}.</h4>
+			return <h2>The approximate value of the home is ${zEstimate}, and homes in the area are approximately ${zIndex}.</h2>
 		}
 
 		if(zEstimate.length > 1){
-			return <h4>The approximate value of the home is ${zEstimate}.</h4>
+			return <h2>The approximate value of the home is ${zEstimate}.</h2>
 		}
 
 	},
