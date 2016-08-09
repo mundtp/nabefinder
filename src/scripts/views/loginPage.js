@@ -8,6 +8,7 @@ const LoginPage = React.createClass({
         return (
             <div className="login">
                 <HeaderBar />
+                <h3 id='loginInfo'>Crowd-sourced user reviews of neighborhoods. Calculate your drive time to work, and get a property value as well as average property value of the surrounding area.</h3>
                 <RegisterBox />
                 <LoginBox />
             </div>

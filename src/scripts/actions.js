@@ -68,6 +68,27 @@ const ACTIONS = {
         })
         nabe.save()
         NABE_STORE.data.collection.fetch()
+    },
+    sortBy: function(sortType) {
+        let coll = NABE_STORE.data.collection
+        if (sortType === 'overall') {
+            let sortedColl = coll.sortBy(function(mod) {
+                return mod.get('overallRating')
+            })
+            coll.set(sortedColl.reverse())
+        }
+        if (sortType === 'amenities') {
+            let sortedColl = coll.sortBy(function(mod) {
+                return mod.get('amenitiesRating')
+            })
+            coll.set(sortedColl.reverse())
+        }
+        if (sortType === 'schools') {
+            let sortedColl = coll.sortBy(function(mod) {
+                return mod.get('schoolsRating')
+            })
+            coll.set(sortedColl.reverse())
+        }
     }
 }
 

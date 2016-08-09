@@ -23,10 +23,17 @@ h1,h2,h3,h4,h5,h6 {
 	    font-size: 25px;
     }
 }
+#loginInfo {
+	width:90%;
+	margin: auto;
+	display: block;
+	padding-top: 3%;
+	line-height: 150%;
+}
 
-#myReviewsHeader {
+#myPostingsHeader {
 	padding: 2%;
-	font-size: 36px;
+	font-size: 28pt;
 }
 #userReviews {
 	padding-top: 1%;
@@ -144,6 +151,7 @@ form {
 	    font-size: 60px;
 	   padding-bottom: 1%;
 	   padding-left: 2%;
+	   margin-bottom: 1%;
 	}
 	.topborder{
 		border-top: .5px solid gray;
@@ -157,10 +165,10 @@ form {
 		display: block;
 		a {
 			color: gray;
-			padding: 1.5%;
-			margin: 2%;
+			padding: 1%;
+			margin: 1%;
 			text-decoration: none;
-			font-size: 25px;
+			font-size: 22pt;
 		}
 		a:hover {
 			color:black;
@@ -198,4 +206,14 @@ input {
 }
 .suggestions:hover {
 	cursor: pointer;
+}
+#sort {
+	margin-top: 1%;
+	font-size: 20pt;
+}
+#sort form {
+	padding-bottom: 1%
+}
+select.sort{
+	font-size: 20pt;
 }

@@ -18,7 +18,7 @@ const NABE_STORE = _.extend(Backbone.Events, {
 	},
 
 	_initialize: function(){
-		this.data.collection.on('sync update', this._emitChange.bind(this))
+		this.data.collection.on('sync update sort', this._emitChange.bind(this))
 	}
 })
 

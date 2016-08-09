@@ -4,7 +4,8 @@ import Backbone from 'backbone'
 import init from './init'
 import LoginPage from './views/loginPage'
 import UserReviews from './views/userReviews'
-import MyReviews from './views/myReviews'
+import HomeValueCalc from './views/homeValueCalc'
+import MyPostings from './views/myPostings'
 import ComposeView from './views/composeView'
 import {User, NabeModel, MyNabeCollection} from './models/models'
 import toastr from 'toastr'
@@ -13,30 +14,34 @@ import toastr from 'toastr'
 const app = function() {
   const AppRouter = Backbone.Router.extend({
     routes: {
-      "home": "handleHome",
+      "userReviews": "handleUserReviews",
+      "homeValueCalculator": "handleHomeValueCalc",
       "neighborhood/createReview": "handleCreateReview",
-      "neighborhood/myReviews": "handleMyReviews",
+      "neighborhood/myPostings": "handleMyPostings",
       "login": "handleLogin",
       "*catchall": "handleRedirect"
     },
-    handleHome: function(){
+    handleUserReviews: function(){
       ReactDOM.render(<UserReviews />, document.querySelector('.container'))
+    },
+    handleHomeValueCalc: function(){
+      ReactDOM.render(<HomeValueCalc />, document.querySelector('.container'))
     },
     handleCreateReview: function(){
       ReactDOM.render(<ComposeView />, document.querySelector('.container'))
     },
-    handleMyReviews: function(){
+    handleMyPostings: function(){
       var coll = new MyNabeCollection()
       coll.fetch().fail(function(err){
         console.log(err)
       })
-      ReactDOM.render(<MyReviews coll={coll} />, document.querySelector('.container'))
+      ReactDOM.render(<MyPostings coll={coll} />, document.querySelector('.container'))
     },
     handleLogin: function(){
       ReactDOM.render(<LoginPage />, document.querySelector('.container'))
     },
     handleRedirect: function(){
-      location.hash = "home"
+      location.hash = "userReviews"
     },
     initialize: function(){
         Backbone.history.start()

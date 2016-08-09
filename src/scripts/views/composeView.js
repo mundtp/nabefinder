@@ -106,8 +106,8 @@ const NabePostingForm = React.createClass({
 			zipcode: zipcode,
 			overallComments: e.currentTarget.overallComments.value,
 			overallRating: e.currentTarget.overallRating.value,
-			amentitiesRating: e.currentTarget.amentitiesRating.value,
-			amentitiesComments: e.currentTarget.amentitiesComments.value,
+			amenitiesRating: e.currentTarget.amenitiesRating.value,
+			amenitiesComments: e.currentTarget.amenitiesComments.value,
 			schoolsRating: e.currentTarget.schoolsRating.value,
 			schoolsComments: e.currentTarget.schoolsComments.value,
 			tags: neighborhood + "_" + zipcode,
@@ -130,6 +130,7 @@ const NabePostingForm = React.createClass({
 					<div>
 						<a>Overall Rating: </a>
 						<select name="overallRating" placeholder="Select a rating">
+						<option value="" disabled selected hidden>Please Choose</option>
 						<option value="5">5 Stars</option>
 						<option value="4">4 Stars</option>
 						<option value="3">3 Stars</option>
@@ -138,8 +139,9 @@ const NabePostingForm = React.createClass({
 						</select>
 					</div>
 					<div>
-						<a>Amentities Rating: </a>
-						<select name="amentitiesRating" placeholder="Select a rating">
+						<a>Amenities Rating: </a>
+						<select name="amenitiesRating" placeholder="Select a rating">
+						<option value="" disabled selected hidden>Please Choose</option>
 						<option value="5">5 Stars</option>
 						<option value="4">4 Stars</option>
 						<option value="3">3 Stars</option>
@@ -150,6 +152,7 @@ const NabePostingForm = React.createClass({
 					<div>
 						<a>Schools Rating: </a>
 						<select name="schoolsRating" placeholder="Select a rating">
+						<option value="" disabled selected hidden>Please Choose</option>
 						<option value="5">5 Stars</option>
 						<option value="4">4 Stars</option>
 						<option value="3">3 Stars</option>
@@ -158,9 +161,9 @@ const NabePostingForm = React.createClass({
 						</select>
 					</div>
 					<textarea name="overallComments" placeholder="Overall comments..."></textarea>
-					<textarea name="amentitiesComments" placeholder="Comments about amentities..."></textarea>
+					<textarea name="amenitiesComments" placeholder="Comments about amenities..."></textarea>
 					<textarea name="schoolsComments" placeholder="Comments about schools..."></textarea>
-					<div>Upload an image: <ReactFilepicker apikey='AvwF4EpzcTGC43TQkmd4xz' onSuccess={this._handleImage}/></div>
+					<div>Upload an image for the neighborhood: <ReactFilepicker apikey='AvwF4EpzcTGC43TQkmd4xz' onSuccess={this._handleImage}/></div>
 					<button type='submit'>SUBMIT</button>
 					
 				</form>

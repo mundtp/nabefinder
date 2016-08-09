@@ -4,7 +4,7 @@ import ACTIONS from '../actions'
 import {User} from '../models/models'
 
 
-const MyReviews = React.createClass({
+const MyPostings = React.createClass({
 
 	getInitialState: function() {
 		return {
@@ -23,7 +23,7 @@ const MyReviews = React.createClass({
 	 	return (
 	 		<div className='dashboard' >
 	 			<HeaderBar />
-	 			<h3 id='myReviewsHeader'>My Reviews</h3>
+	 			<h3 id='myPostingsHeader'>My Postings</h3>
 	 			<NabeContainer nabeColl={this.props.coll}/>
 	 		</div>
 	 	)
@@ -71,10 +71,10 @@ const Nabe = React.createClass({
 				<h3>{this.props.nabeModel.get('title')}</h3>
 				<img src={this.props.nabeModel.get('imageUrl')} />
 				<p>Overall Rating: {this.props.nabeModel.get('overallRating')} {this._handlesRating(this.props.nabeModel.get('overallRating'))}</p>
-				<p>Amentities Rating: {this.props.nabeModel.get('amentitiesRating')} {this._handlesRating(this.props.nabeModel.get('amentitiesRating'))}</p>
+				<p>Amenities Rating: {this.props.nabeModel.get('amenitiesRating')} {this._handlesRating(this.props.nabeModel.get('amenitiesRating'))}</p>
 				<p>Schools Rating: {this.props.nabeModel.get('schoolsRating')} {this._handlesRating(this.props.nabeModel.get('schoolsRating'))}</p>
 				<p>Overall Comments: {this.props.nabeModel.get('overallComments')}</p>
-				<p>Amentities Comments: {this.props.nabeModel.get('amentitiesComments')}</p>
+				<p>Amenities Comments: {this.props.nabeModel.get('amenitiesComments')}</p>
 				<p>Schools Comments: {this.props.nabeModel .get('schoolsComments')}</p>
 				<p>{this.props.nabeModel.get('likes').length} Likes</p>
 				<button onClick={this._removeNabe}>Delete Post</button>
@@ -83,6 +83,6 @@ const Nabe = React.createClass({
 	}
 })
 
-export default MyReviews
+export default MyPostings
 
 
