@@ -179,7 +179,7 @@ const HomeValueCalc = React.createClass({
 	 			<HeaderBar />
 	 			<h3 id='userReviews'>Home Value Calculator</h3>
 	 			<div >
-	 				<input className='searchBar' onKeyDown={this._handleTagSearch} type='text' placeholder='Search an address...'/>
+	 				<input className='searchBar' onKeyDown={this._handleTagSearch} type='text' placeholder='Search a home address...'/>
 	 				<p className='suggestions' onClick={this._handleSuggestion}>{suggestion}</p>
 	 			</div>
 	 			{this._displayNeighborhood()}

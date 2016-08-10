@@ -142,7 +142,7 @@ const UserReviews = React.createClass({
 	 			<HeaderBar />
 	 			<h3 id='userReviews'>User Reviews</h3>
 	 			<div >
-	 				<input className='searchBar' onKeyDown={this._handleTagSearch} type='text' placeholder='Search an address or neighborhood...'/>
+	 				<input className='searchBar' onKeyDown={this._handleTagSearch} type='text' placeholder='Search a home address or neighborhood...'/>
 	 				<p className='suggestions' onClick={this._handleSuggestion}>{suggestion}</p>
 	 			</div>
 	 			{this._displayNeighborhood()}
