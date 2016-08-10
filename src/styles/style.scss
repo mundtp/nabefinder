@@ -156,18 +156,18 @@ form {
 	}
 }
 img {
-	max-width: 90%;
-	max-height: 100%;
+	width: 90%;
+	/*max-height: 50%;*/
+	/*width: 100%;*/
 
 	/*display: table-cell;*/
 	vertical-align: middle;
-	border-radius: 10px;
+	border-radius: 40px;
 
 }
 #img {
 	background: #d1e0e0;
-	/*height: 30vh;*/
-	line-height: 30vh;
+	line-height: 40vh;
 	border: 15px solid white;
 	border-radius: 60px;
 

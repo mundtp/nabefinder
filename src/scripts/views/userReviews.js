@@ -135,6 +135,7 @@ const UserReviews = React.createClass({
 	},
 
 	render: function() {
+		// for a default option: <option value="" disabled selected hidden>Displaying All</option>
 
 	 	return (
 	 		<div className='dashboard' >
@@ -149,7 +150,7 @@ const UserReviews = React.createClass({
 	 			{this._displayDistance()}
 	 			<div id="sort"><form><a>Sort By: </a>
 						<select onChange={this._handleSortBy} className="sort">
-							<option value="" disabled selected hidden>Please Choose</option>
+							<option value='recent'>Most Recent</option>
 							<option value='overall'>Best Overall Rating</option>
 							<option value='amenities'>Best Amenities Rating</option>
 							<option value='schools'>Best Schools Rating</option>

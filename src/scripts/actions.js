@@ -59,7 +59,13 @@ const ACTIONS = {
                 data: {
                     tags: tags
                 }
-          })
+          }).then(function(){
+        let coll = NABE_STORE.data.collection
+        let sortedColl = coll.sortBy(function(mod) {
+                return parseInt(mod.cid.slice(1))
+            })
+        coll.set(sortedColl.reverse())
+        })
     },
     likeNabe: function(nabe,userObj){
         if(nabe.get('likes').includes(userObj._id)){
@@ -90,6 +96,12 @@ const ACTIONS = {
         if (sortType === 'schools') {
             let sortedColl = coll.sortBy(function(mod) {
                 return mod.get('schoolsRating')
+            })
+            coll.set(sortedColl.reverse())
+        }
+        if (sortType === 'recent') {
+            let sortedColl = coll.sortBy(function(mod) {
+                return parseInt(mod.cid.slice(1))
             })
             coll.set(sortedColl.reverse())
         }
