@@ -80,7 +80,6 @@ const ComposeView = React.createClass({
 			
 			return <h3>This review will be posted for {neighborhood} in zipcode {zipcode}.</h3>
 		}
-
 	},
 	 render: function() {
 	 	return (

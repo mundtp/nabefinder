@@ -40,9 +40,13 @@ const ACTIONS = {
         var nabe = new NabeModel(nabeObj)
         nabe.save().then(
             (responseData) => {
+                if(responseData.name){
+                    toastr.error('Validation Error, dish was not saved')
+                }
+                else{
                 toastr.success('Review has been saved')
               console.log(responseData)
-              location.hash='home'
+              location.hash='home'}
             },
             (err) => {
               alert('Failure')

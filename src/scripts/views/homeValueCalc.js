@@ -168,7 +168,7 @@ const HomeValueCalc = React.createClass({
 	},
 	_displayDistance: function(){
 		if(distance.length > 1){
-			return <h4>The calculated distance is {distance} with an estimated drive time of {duration}.</h4>
+			return <h2>The calculated distance is {distance} with an estimated drive time of {duration}.</h2>
 		}
 	},
 
