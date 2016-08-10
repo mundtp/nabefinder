@@ -121,26 +121,6 @@ form {
     }
 }
 
-.inbox {
-	.msg {
-		border: 3px solid black;
-		background: white;
-		width: 60%;
-		margin: 3% auto;
-		padding: 2%;
-
-		p {
-			margin: 1% 0;
-		}
-
-		.msgDeets {
-			display: inline-block;
-			vertical-align: center;
-			margin-right: 10%;
-		}
-	}
-}
-
 #header {
 	text-align: center;
 
@@ -176,8 +156,24 @@ form {
 	}
 }
 img {
-	max-width: 80%;
+	max-width: 90%;
+	max-height: 100%;
+
+	/*display: table-cell;*/
+	vertical-align: middle;
+	border-radius: 10px;
+
 }
+#img {
+	background: #d1e0e0;
+	/*height: 30vh;*/
+	line-height: 30vh;
+	border: 15px solid white;
+	border-radius: 60px;
+
+/*	vertical-align: middle;*/
+}
+
 .nabe {
 	display: inline-block;
 	width: 33%;

@@ -199,7 +199,7 @@ const Nabe = React.createClass({
 		return (
 			<div className="nabe">
 				<h3>{this.props.nabeModel.get('title')}</h3>
-				<img src={this.props.nabeModel.get('imageUrl')} />
+				<div id='img'><img src={this.props.nabeModel.get('imageUrl')} /></div>
 				<p>Overall Rating: {this.props.nabeModel.get('overallRating')} {this._handlesRating(this.props.nabeModel.get('overallRating'))}</p>
 				<p>Amenities Rating: {this.props.nabeModel.get('amenitiesRating')} {this._handlesRating(this.props.nabeModel.get('amenitiesRating'))}</p>
 				<p>Schools Rating: {this.props.nabeModel.get('schoolsRating')} {this._handlesRating(this.props.nabeModel.get('schoolsRating'))}</p>
