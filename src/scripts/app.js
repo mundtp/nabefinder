@@ -7,10 +7,10 @@ import UserReviews from './views/userReviews'
 import HomeValueCalc from './views/homeValueCalc'
 import MyPostings from './views/myPostings'
 import ComposeView from './views/composeView'
+import AdminPage from './views/adminPage'
 import {User, NabeModel, MyNabeCollection} from './models/models'
 import toastr from 'toastr'
 
-//STEP 5 (build your client side api routes)
 const app = function() {
   const AppRouter = Backbone.Router.extend({
     routes: {
@@ -19,6 +19,7 @@ const app = function() {
       "neighborhood/createReview": "handleCreateReview",
       "neighborhood/myPostings": "handleMyPostings",
       "login": "handleLogin",
+      "administrator": "handleAdministrator",
       "*catchall": "handleRedirect"
     },
     handleUserReviews: function(){
@@ -39,6 +40,9 @@ const app = function() {
     },
     handleLogin: function(){
       ReactDOM.render(<LoginPage />, document.querySelector('.container'))
+    },
+    handleAdministrator: function(){
+      ReactDOM.render(<AdminPage />, document.querySelector('.container'))
     },
     handleRedirect: function(){
       location.hash = "userReviews"
