@@ -6,11 +6,12 @@ import HeaderBar from './headerBar'
 const LoginPage = React.createClass({
     render: function() {
         return (
-            <div className="login">
+            <div>
                 <HeaderBar />
                 <h3 id='loginInfo'>Crowd-sourced user reviews of neighborhoods. Calculate your drive time to work, and get a property value as well as average property value of the surrounding area.</h3>
+                 <LoginBox />
                 <RegisterBox />
-                <LoginBox />
+               
             </div>
             )
     }
@@ -31,11 +32,11 @@ const RegisterBox = React.createClass({
         return (
             <div className="login">
                 <form onSubmit={this._handleRegister} >
-                    <h3>Register</h3>
+                    <h3>New User Register</h3>
                     <input name = 'userName' placeholder = 'Name' />
                     <input type="email" name="email" placeholder="Email" />
                     <input type="password" name="password" placeholder="Password" />
-                    <button type="submit">Register</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
             )
@@ -50,12 +51,12 @@ const LoginBox = React.createClass({
 
     render: function() {
         return (
-            <div className="loginBox login">
-                <form onSubmit={this._handleLogin} >
+            <div className="login">
+                <form id='login' onSubmit={this._handleLogin} >
                     <h3>Log In</h3>
                     <input type="email" name="email" placeholder="Email" />
                     <input type="password" name="password" placeholder="Password" />
-                    <button type="submit">Log In</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
             )

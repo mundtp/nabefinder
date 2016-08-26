@@ -2,6 +2,8 @@ import {User, NabeModel} from './models/models'
 import NABE_STORE from './store'
 import toastr from 'toastr'
 
+toastr.success.background = 'black'
+
 
 
 const ACTIONS = {

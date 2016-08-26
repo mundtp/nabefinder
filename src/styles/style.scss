@@ -1,6 +1,7 @@
 * {
 	font-family: Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
+	background: #ccdcff;
 }
 
 
@@ -8,11 +9,19 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: center;
 }
 .login {
+	
+	width: 35%;
+	margin: auto;
 	h3 {
 		margin: 0;
+		background: #99b9ff;
 	}
 	form {
+		width: 100%;
+		background: #99b9ff;
 		padding-bottom: 0;
+		margin: 35px 0 35px ;
+		border-radius: 15px;
 	}
 	input {
     	width: 80%;
@@ -23,6 +32,7 @@ h1,h2,h3,h4,h5,h6 {
 	    font-size: 25px;
     }
 }
+
 #loginInfo {
 	width:90%;
 	margin: auto;
@@ -49,15 +59,15 @@ body {
 }
 
 button {
-	background-color:#66b3ff;
+	background-color:#3374ff;
 	border-radius:90px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
+	font-size:18pt;
+	letter-spacing: .03em;
 	padding:7px 24px;
+	margin-bottom: 7px;
 	display: inline-block;
 
 }
@@ -162,9 +172,9 @@ img {
 
 }
 #img {
-	background: #d1e0e0;
+	background: #99b9ff;
 	line-height: 40vh;
-	border: 15px solid white;
+	border: 15px solid #ccdcff;
 	border-radius: 60px;
 }
 
@@ -208,4 +218,10 @@ input {
 }
 select.sort{
 	font-size: 20pt;
+}
+
+.toast {
+	* {
+ 		 background-color: transparent !important;
+	}
 }
