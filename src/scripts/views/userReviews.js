@@ -178,6 +178,7 @@ const NabeContainer = React.createClass({
 const Nabe = React.createClass({
 	_handlesLikes: function(){
 		ACTIONS.likeNabe(this.props.nabeModel,User.getCurrentUser())
+		ACTIONS.fetchReviews()
 	},
 	_handlesRating: function(num){
 		if (num === 5){
