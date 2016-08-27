@@ -166,15 +166,18 @@ form {
 	}
 }
 img {
-	width: 90%;
+	width: 95%;
 	vertical-align: middle;
 	border-radius: 40px;
+	max-height: 33vh;
 
 }
 #img {
+	width: 97%;
+	margin: auto;
 	background: #99b9ff;
-	line-height: 40vh;
-	border: 15px solid #ccdcff;
+	line-height: 35vh;
+	border: 5px solid #ccdcff;
 	border-radius: 60px;
 }
 
