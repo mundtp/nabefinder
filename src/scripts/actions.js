@@ -61,13 +61,15 @@ const ACTIONS = {
                 data: {
                     tags: tags
                 }
-          }).then(function(){
-        let coll = NABE_STORE.data.collection
-        let sortedColl = coll.sortBy(function(mod) {
-                return parseInt(mod.cid.slice(1))
-            })
-        coll.set(sortedColl.reverse())
-        })
+          })
+          // for default sorting by most recent:
+        //   .then(function(){
+        // let coll = NABE_STORE.data.collection
+        // let sortedColl = coll.sortBy(function(mod) {
+        //         return parseInt(mod.cid.slice(1))
+        //     })
+        // coll.set(sortedColl.reverse())
+        // })
     },
     likeNabe: function(nabe,userObj){
         if(nabe.get('likes').includes(userObj._id)){
@@ -106,6 +108,12 @@ const ACTIONS = {
                 return parseInt(mod.cid.slice(1))
             })
             coll.set(sortedColl.reverse())
+        }
+        if (sortType === 'oldest') {
+            let sortedColl = coll.sortBy(function(mod) {
+                return parseInt(mod.cid.slice(1))
+            })
+            coll.set(sortedColl)
         }
     }
 }

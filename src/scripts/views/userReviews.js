@@ -150,7 +150,8 @@ const UserReviews = React.createClass({
 	 			{this._displayDistance()}
 	 			<div id="sort"><form><a>Sort By: </a>
 						<select onChange={this._handleSortBy} className="sort">
-							<option value='recent'>Most Recent</option>
+							<option value='oldest'>Oldest</option>
+							<option value='recent'>Newest</option>
 							<option value='overall'>Best Overall Rating</option>
 							<option value='amenities'>Best Amenities Rating</option>
 							<option value='schools'>Best Schools Rating</option>
